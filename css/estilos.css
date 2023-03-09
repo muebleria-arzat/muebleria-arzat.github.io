@@ -454,6 +454,29 @@ div#slider figure {
     display: block;
 }
 
+.questions__offer {
+    width: 100%;
+    margin: 0;
+    padding-left: 30%;
+    padding-right: 30%;
+    max-width: 100%;
+    background-color: #e5e5f7;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact__input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
 .questions__copy {
     width: 60%;
     margin: 0 auto;
@@ -630,6 +653,13 @@ div#slider figure {
         width: 200px;
         height: 200px;
 
+    }
+
+    .questions__offer {
+        width: 100%;
+        margin: 0;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .questions__copy {

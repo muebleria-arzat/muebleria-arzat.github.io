@@ -270,12 +270,21 @@
                     </div>
                 </article>
             </section>
-
-            <section class="questions__offer">
-                <!-- <h2 class="subtitle">¿Estas listo para aprender CSS?</h2> -->
+            
+        </section>
+        
+        <section class="questions__offer container">
+            <form id="myform" class="footer__form" action="https://formspree.io/f/mknazgbk" method="POST">
+                <h2 class="subtitle">Contacto</h2>
                 <p class="questions__copy">Déjanos un mensaje.</p>
-                <a href="https://wa.me/9321270207" target="_blank" class="cta">WhatsApp</a>
-            </section>
+                <div class="contact__inputs">
+                    <input type="name" placeholder="Nombre:" class="contact__input" name="_name" required>
+                    <input type="email" placeholder="Email:" class="contact__input" name="_replyto" required>
+                    <input type="tel" placeholder="Teléfono:" class="contact__input" name="phone" required>
+                    <textarea name="_message" id="" cols="30" rows="10" class="contact__input" placeholder="Escribe tu mensaje..." required></textarea>
+                    <input type="submit" value="Enviar" class="footer__submit">
+                </div>
+            </form>
         </section>
     </main>
 
@@ -327,6 +336,7 @@
     </footer>
 
     <script src="./js/slider.js"></script>
+    <script src="./js/contact.js"></script>
     <script src="./js/questions.js"></script>
     <script src="./js/menu.js"></script>
 </body>
