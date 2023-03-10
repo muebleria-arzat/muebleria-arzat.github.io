@@ -268,29 +268,71 @@ body {
     box-shadow: 0 0 1px rgba(0, 0, 0, .5);
 }
 
-/* Slider */
-div#slider {
+.slider {
+    width: 100%;
     overflow: hidden;
-    height: 650px;
 }
 
-/* las imágenes no van a salir del márgen de la pantalla*/
-div#slider figure img {
-    width: 20%;
-    float: left;
+.slider-modelo {
+    display: block;
+    margin-top: 25px;
+    font-weight: 700;
 }
 
-div#slider figure {
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    text-align: left;
-    font-size: 0;
-    animation: 30s slidy infinite;
-    /*el movimiento se va a mantener de forma indefinida -infinito-*/
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+
 }
 
+.contenido-slider{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+
+    background: #e5e5f7;
+    color: #1d293f;
+}
+
+/* .contenido-slider:nth-child(2){
+    background: #e5e5f7;
+    color: #1d293f;
+}
+
+.contenido-slider:nth-child(3){
+    background: #1d293f;
+    color: #fff;
+} */
+
+.contenido-slider > img{
+    /* background-color: #000; */
+    width: 500px;
+}
+
+.contenido-slider > div{
+    width: 30%;
+}
+
+.contenido-slider h2{
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.contenido-slider a{
+    background-color: #2091F9;
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 32px;
+    width: 40%;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
 
 /*esta parte del código define el movimiento de las imágenes a la izquierda*/
 @keyframes slidy {
@@ -331,62 +373,6 @@ div#slider figure {
     }
 }
 
-/* slider */
-
-.slider {
-    background-color: #e5e5f7;
-}
-
-.slider__container {
-    /* padding: 50PX 0; */
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    gap: 1em;
-    align-items: center;
-}
-
-.slider__body {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    opacity: 0;
-    pointer-events: none;
-}
-
-
-.slider__body--show {
-    pointer-events: unset;
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.slider__img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 30%;
-}
-
-.slider__texts {
-    max-width: 700px;
-}
-
-.slider__course {
-    background-color: royalblue;
-    color: #fff;
-    display: inline-block;
-    padding: 5px;
-}
-
-.slider__arrow {
-    width: 90%;
-    cursor: pointer;
-}
 
 /* Questions */
 
@@ -637,22 +623,16 @@ div#slider figure {
         justify-self: center;
     }
 
-    .slider__container {
-        grid-template-columns: 30px 1fr 30px;
+    .contenido-slider > img{
+        width: 250px;
     }
 
-    .slider__body {
-        grid-template-columns: 1fr;
-        grid-template-rows: max-content max-content;
-        gap: 3em;
-        justify-items: center;
+    .contenido-slider > div{
+        width: 40%;
     }
 
-
-    .slider__img {
-        width: 200px;
-        height: 200px;
-
+    .contenido-slider h2{
+        font-size: 23px;
     }
 
     .questions__offer {
@@ -718,22 +698,14 @@ div#slider figure {
         font-size: 2rem;
     }
 
-    .slider {
-        --padding-container: 60px 0;
-    }
-
-    .slider__container {
-        grid-template-columns: 28px 1fr 28px;
-        gap: .9em;
-    }
-
-    .slider__arrow {
-        width: 100%;
-    }
-
-    .slider__course {
-        margin-top: 15px;
-    }
+    .contenido-slider{
+        flex-direction: column-reverse;
+     }
+ 
+     .contenido-slider > div{
+         width: 80%;
+     }
+ 
 
     .questions__title {
         font-size: 1rem;

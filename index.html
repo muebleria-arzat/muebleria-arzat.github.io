@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="./images/logoFavicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <!-- <link rel="stylesheet" href="./css/slider.css"> -->
 
     <meta name="theme-color" content="#2091F9">
 </head>
@@ -30,7 +31,7 @@
                     <a href="#idAcercaDe" class="nav__links">Acerca de</a>
                 </li>
                 <li class="nav__items">
-                    <a href="#" class="nav__links">Contacto</a>
+                    <a href="#idContact" class="nav__links">Contacto</a>
                 </li>
                 <li class="nav__items">
                     <a href="#" class="nav__links">Productos</a>
@@ -136,80 +137,43 @@
             </div> -->
         </section>
 
-        <div id="slider">
-            <figure>
-                <img src="images/slider/slider-2.png" alt="">
-                <img src="https://cdn.forbes.com.mx/2022/01/electrodomesticos.jpg" alt="">
-                <img src="https://america.com.mx/assets/img/colchones/header-2021-11-1.jpg" alt="">
-            </figure>
-        </div>
-
-        <!-- <section class="slider">
-            <div class="slider__container container">
-                <img src="./images/leftarrow.svg" class="slider__arrow" id="before">
-
-                <section class="slider__body slider__body--show" data-id="1">
-                    <div class="slider__texts">
-                        <h2 class="subtitle">Lavadora Semiautomática De Dos Tinas De 15 Kg, <span class="slider__course">ALD1545JE</span></h2>
-                        <ul class="slider__review">
-                            <li>MAXSPINDRY</li>
-                            <li>Lava en Menos Tiempo</li>
-                            <li>Facilidad de uso</li>
-                            <li>Gran Capacidad de 15 kg</li>
-                            <li>Sistema de lavado por impulsor</li>
-                        </ul>
+        <div class="slider">
+            <div class="slider-contenedor">
+                <section class="contenido-slider">
+                    <div>
+                        <h2>Juego de Sala (3-2-1), Tela Suede Color Rojo TP chocolate <span class="slider-modelo"> Modelo: BILBAO</span></h2>
+                        <a href="#">Ver ahora</a>
                     </div>
+                    <img src="images/slider/slider-1.png" alt="">
 
-                    <figure class="slider__picture">
-                        <img src="https://kitchenaidmx.vtexassets.com/arquivos/ids/164075-1600-1600?v=637890114648130000&width=1600&height=1600&aspect=true" class="slider__img">
-                    </figure>
                 </section>
-
-                <section class="slider__body" data-id="2">
-                    <div class="slider__texts">
-                        <h2 class="subtitle">SALA BILBAO, <span class="slider__course">SAMAR</span></h2>
-                        <ul class="slider__review">
-                            <li>Piezas 3-2-1</li>
-                            <li>Tela Suede</li>
-                            <li>Color Rojo - TP chocolate</li>
-                        </ul>
+                <section class="contenido-slider">
+                    <div>
+                        <h2>Refrigerador Top Mount 11 cu.ft con Twin Cooling Plus <span class="slider-modelo"> Modelo: RT29A5000S8</span></h2>
+                        <a href="#">Ver ahora</a>
                     </div>
+                    <img src="images/slider/slider-2.png" alt="">
 
-                    <figure class="slider__picture">
-                        <img src="./images/slider/slider-2.png" class="slider__img">
-                    </figure>
                 </section>
-
-                <section class="slider__body" data-id="3">
-                    <div class="slider__texts">
-                        <h2 class="subtitle">Mi nombre es Karen Arteaga, <span class="slider__course">estudiante de
-                                CSS.</span></h2>
-                        <p class="slider__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
-                            esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                <section class="contenido-slider">
+                    <div>
+                        <h2>Lavadora Semiautomática De Dos Tinas De 15 Kg MaxSpin Dry Blanca <span class="slider-modelo"> Modelo: ALD1545JE</span></h2>
+                        <a href="#">Ver ahora</a>
                     </div>
+                    <img src="images/slider/slider-3.png" alt="">
 
-                    <figure class="slider__picture">
-                        <img src="./images/face3.jpg" class="slider__img">
-                    </figure>
                 </section>
-
-                <section class="slider__body" data-id="4">
-                    <div class="slider__texts">
-                        <h2 class="subtitle">Mi nombre es Kevin Ramirez, <span class="slider__course">estudiante de
-                                CSS.</span></h2>
-                        <p class="slider__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
-                            esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                <section class="contenido-slider">
+                    <div>
+                        <h2>Juego de Sala (3-2-1), Tela Suede Color Rojo TP chocolate <span class="slider-modelo"> Modelo: BILBAO</span></h2>
+                        <a href="#">Ver ahora</a>
                     </div>
+                    <img src="images/slider/slider-1.png" alt="">
 
-                    <figure class="slider__picture">
-                        <img src="./images/face4.jpg" class="slider__img">
-                    </figure>
                 </section>
-
-
-                <img src="./images/rightarrow.svg" class="slider__arrow" id="next">
+                
             </div>
-        </section> -->
+        </div>
 
         <section id="idAcercaDe" class="questions container">
             <h2 class="subtitle">Quiénes somos</h2>
@@ -270,10 +234,10 @@
                     </div>
                 </article>
             </section>
-            
+
         </section>
-        
-        <section class="questions__offer container">
+
+        <section id="idContact" class="questions__offer container">
             <form id="myform" class="footer__form" action="https://formspree.io/f/mknazgbk" method="POST">
                 <h2 class="subtitle">Contacto</h2>
                 <p class="questions__copy">Déjanos un mensaje.</p>
@@ -281,7 +245,8 @@
                     <input type="name" placeholder="Nombre:" class="contact__input" name="_name" required>
                     <input type="email" placeholder="Email:" class="contact__input" name="_replyto" required>
                     <input type="tel" placeholder="Teléfono:" class="contact__input" name="phone" required>
-                    <textarea name="_message" id="" cols="30" rows="10" class="contact__input" placeholder="Escribe tu mensaje..." required></textarea>
+                    <textarea name="_message" id="" cols="30" rows="10" class="contact__input"
+                        placeholder="Escribe tu mensaje..." required></textarea>
                     <input type="submit" value="Enviar" class="footer__submit">
                 </div>
             </form>
@@ -302,7 +267,7 @@
                         <a href="#idAcercaDe" class="nav__links">Acerca de</a>
                     </li>
                     <li class="nav__items">
-                        <a href="#" class="nav__links">Contacto</a>
+                        <a href="#idContact" class="nav__links">Contacto</a>
                     </li>
                     <li class="nav__items">
                         <a href="#" class="nav__links">Productos</a>

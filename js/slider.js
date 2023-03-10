@@ -1,31 +1,29 @@
-(function(){
-    
-    const sliders = [...document.querySelectorAll('.slider__body')];
-    const buttonNext = document.querySelector('#next');
-    const buttonBefore = document.querySelector('#before');
-    let value;   
+let slider = document.querySelector(".slider-contenedor")
+let sliderIndividual = document.querySelectorAll(".contenido-slider")
+let contador = 1;
+let width = sliderIndividual[0].clientWidth;
+let intervalo = 3000;
 
-    buttonNext.addEventListener('click', ()=>{
-        changePosition(1);
-    });
+window.addEventListener("resize", function(){
+    width = sliderIndividual[0].clientWidth;
+})
 
-    buttonBefore.addEventListener('click', ()=>{
-        changePosition(-1);
-    });
-
-    const changePosition = (add)=>{
-        const currentSlider = document.querySelector('.slider__body--show').dataset.id;
-        value = Number(currentSlider);
-        value+= add;
+setInterval(function(){
+    slides();
+},intervalo);
 
 
-        sliders[Number(currentSlider)-1].classList.remove('slider__body--show');
-        if(value === sliders.length+1 || value === 0){
-            value = value === 0 ? sliders.length  : 1;
-        }
 
-        sliders[value-1].classList.add('slider__body--show');
+function slides(){
+    slider.style.transform = "translate("+(-width*contador)+"px)";
+    slider.style.transition = "transform .8s";
+    contador++;
 
+    if(contador == sliderIndividual.length){
+        setTimeout(function(){
+            slider.style.transform = "translate(0px)";
+            slider.style.transition = "transform 0s";
+            contador=1;
+        },1500)
     }
-
-})();
+}
